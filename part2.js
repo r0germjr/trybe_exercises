@@ -26,4 +26,6 @@ const longestWord = (world) => {
   return result;
 }
 
+//const longestWord = text => text.split(' ').sort((wordA, wordB) => wordB.length - wordA.length)[0]
+
 console.log(longestWord(phrase));
