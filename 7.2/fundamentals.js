@@ -38,7 +38,6 @@ const listOfSkills = (student) => {
   }
   
 }
-
 //console.log(`Estudante 1`);
 //listOfSkills(student2);
 
@@ -52,20 +51,22 @@ const student3 = {
   SoftSkill: 'Ótimo',
 };
 
-const listSkillsValuesWithFor = (student) => {
-  const skills = [];
-  for(skill in student) {
-    skills.push(student[skill]);
-  }
-
-  return skills;
-};
-
 const listSkillsValuesWithValues = (student) => Object.values(student);
+//console.log(listSkillsValuesWithValues(student3));
 
-// Sem Object.values
-//console.log(listSkillsValuesWithFor(student));
+// Parte IV - Object.entries
 
-// Com Object.values
-console.log(listSkillsValuesWithValues(student3));
+const países = {
+  França: 'Paris',
+  Brasil: 'Brasília',
+  Espanha: 'Madrid',
+  Portugal: 'Lisboa',
+};
+const pairKeyValue = Object.entries(países);
+console.log(pairKeyValue);
 
+for(index in pairKeyValue) {
+  console.log('--------');
+  console.log('País:', pairKeyValue[index][0]);
+  console.log('Capital:', pairKeyValue[index][1]);
+};
