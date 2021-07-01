@@ -8,8 +8,8 @@ const customer = {
   job: 'Teacher',
 };
 
-const newProperty = (object, key, value) =>  object[key] = value;
-newProperty(customer, 'city', 'Golden Coast');
+//const newProperty = (object, key, value) =>  object[key] = value;
+//newProperty(customer, 'city', 'Golden Coast');
 //console.log(customer);
 
 // Object.keys
@@ -63,10 +63,27 @@ const países = {
   Portugal: 'Lisboa',
 };
 const pairKeyValue = Object.entries(países);
-console.log(pairKeyValue);
+//console.log(pairKeyValue);
 
-for(index in pairKeyValue) {
-  console.log('--------');
-  console.log('País:', pairKeyValue[index][0]);
-  console.log('Capital:', pairKeyValue[index][1]);
+//for(index in pairKeyValue) {
+//  console.log('--------');
+//  console.log('País:', pairKeyValue[index][0]);
+//  console.log('Capital:', pairKeyValue[index][1]);
+//};
+
+//Parte 5 - Object.assign
+//Esse método é utilizado para copiar os valores de todas as propriedades de um ou mais objetos para um objeto destino
+
+
+const person = {
+  name:'Roberto',
 };
+
+const lastName = {
+  lastName: 'Silva',
+};
+
+const newPerson = Object.assign({},person,lastName);
+newPerson.name = 'Gilberto';
+console.log(newPerson);
+console.log(person);
