@@ -12,5 +12,4 @@ const expected = [3, 6, 10, 5];
 
 assert.strictEqual(typeof wordLengths, 'function');
 const output = wordLengths(words);
-console.log(output);
 assert.deepStrictEqual(output, expected);
