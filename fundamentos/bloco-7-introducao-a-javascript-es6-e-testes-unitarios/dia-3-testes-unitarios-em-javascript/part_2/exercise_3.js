@@ -1,9 +1,9 @@
 const assert = require('assert');
-const sumAllNumbers = (number) => {
+const sumAllNumbers = (numbers) => {
   let output = 0;
-  for(let index = 0; index < number.length; index += 1) {
-    output += number[index];
-  };
+  for (let index in numbers) {
+    output += numbers[index];
+  }
   return output;
 };
 
