@@ -6,12 +6,12 @@ const fetchPromise = () => {
     );
     const sum = numbers.map((number) => number * number)
                        .reduce((acc, curr) => acc + curr);
-    sum < 8000 ? resolve() : reject();
+    sum < 8000 ? resolve(sum) : reject(sum);
   });
   
   promise
-    .then(() => console.log(`Promise resolvida`))
-    .catch(() => console.log(`Promise rejeitada`));
+    .then((result) => console.log(`Promise resolvida: ${result}`))
+    .catch((result) => console.log(`Promise rejeitada: ${result}`));
 };
   
 fetchPromise();
